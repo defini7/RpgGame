@@ -1,6 +1,7 @@
 #pragma once
 
 #include "olcPixelGameEngine.h"
+#include "cObject.h"
 
 #include <cstdint>
 
@@ -14,6 +15,13 @@ public:
 	struct Unit
 	{
 		uint32_t nId;
+
+		Rect rBody;
+
+		bool bObstacle = false;
+		bool bTeleport = false;
+
+		olc::vu2d vEndPoint{};
 	};
 
 	olc::Renderable gfxMap;
